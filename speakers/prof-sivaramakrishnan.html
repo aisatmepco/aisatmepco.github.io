@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8">
+    <title>Prof. Sivaramakrishnan Sivasubramanian - AIS@Mepco2022</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AIS@Mepco2022 - Advanced Instructional School on Algebraic Combinatorics and Spectral Graph Theory held at Mepco Schlenk Engineering College, Sivakasi from 30 May to 16 June 2022">
+    <meta name="keywords" content="AIS@Mepco2022, Advanced Instructional School on Algebraic Combinatorics and Spectral Graph Theory, Mepco Schlenk Engineering College, Sivakasi, IIT Bombay, Advanced Instructional Schools, IISc Bangalore, Sivakasi, Jayanth Kumar">
+    <meta name="author" content="Mepco Schlenk Engineering College, Sivakasi, Jayanth Kumar">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image" content="https://aisatmepco.web.app/ais-mepco-web.webp">
+    <meta name="twitter:image" content="https://aisatmepco.web.app/ais-mepco-web.webp">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+    
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #131022;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .header .navbar .navbar-expand-lg .navbar-light .bg-light .shadow-sm .fixed-top {
+        backdrop-filter: blur(20px);
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  
+    
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span><b>AIS@Mepco2022</b></span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      
+      <header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3">
+            AIS@Mepco2022
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a href="/speakers" class="nav-link">Speakers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/places-to-visit.html" class="nav-link">Places to visit</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/selected-participants.html" class="nav-link">Participants List</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/waitlist.html" class="nav-link">Waitlist</a>
+                </li>
+              </ul>
+            </div>  
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+
+
+      <!-- Speakers -->
+      <section id="speakers" class="container py-5 my-md-3 my-lg-5">
+          <!-- Home icon + text -->
+          <br>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a></li>
+      <li class="breadcrumb-item"><a href="/speakers">Speakers</a></li>
+      <li class="breadcrumb-item active" aria-current="page"> Prof. Sivaramakrishnan Sivasubramanian</li>
+    </ol>
+  </nav>
+            <h2 class="h1 text-center pt-1 pb-3 mb-3 mb-lg-4">Speakers</h2>
+
+            <section class="container py-lg-4 py-xl-5 mt-3 mb-5">
+                <div class="row g-0 bg-dark bg-repeat-0 bg-position-center border rounded-3 overflow-hidden" style="background-image: url(/assets/img/landing/conference/author-pattern.svg);">
+                  <div class="col-md-5 bg-repeat-0 bg-position-top-center bg-size-cover" style="background-image: url(https://ik.imagekit.io/mepco/images/krishna_ir7euY6eb.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900073344); min-height: 350px;"></div>
+                  <div class="col-md-7 py-xl-5 px-4">
+                    <div class="py-5 mx-auto" style="max-width: 530px;">
+                      <div class="fs-xl text-light opacity-50 mb-2">Learn from the best</div>
+                      <h2 class="h1 text-light mb-4">Prof. Sivaramakrishnan Sivasubramanian</h2>
+                      <p class="text-light opacity-70 pb-4">Krishnan Sivasubramanian, is currently Professor at Department of Mathematics, Indian Institute of Technology Bombay. He expertise in the area of Spectral Graph theory and Combinatorics.  </p>
+                      <h4 class="text-light">Topics for discussion:</h4>
+                      <ul class="text-light opacity-50 mb-2">
+                        <li>Symmetric functions, Five bases for the space of degree "d" symmetric functions over \QQ. Change of basis among these, Hall inner product, RSK algorithm, Using SAGE to get acquainted with symmetric functions.<br></li>
+                      </ul>
+                      <br>
+                      <div class="d-flex flex-column flex-sm-row">
+                        <a href="https://iitb.irins.org/profile/155757"  target="_blank "class="btn btn-info">
+                          Visit website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+        </div>
+      </section>
+
+
+
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <span class="fs-4">AIS@Mepco2022</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/speakers" class="nav-link">Speakers</a></li>
+          <li class="nav-item">
+            <a href="/places-to-visit.html" class="nav-link">Places to visit</a>
+          </li>
+          <li class="nav-item">
+            <a href="/selected-participants.html" class="nav-link">Participants List</a>
+          </li>
+          <li class="nav-item">
+            <a href="/waitlist.html" class="nav-link">Waitlist</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a href=" https://www.atmschools.org/school/2022/AIS/acsgt/application-form" class="btn btn-primary shadow-primary btn-lg me-sm-4 mb-3">Register now</a>
+        </div>
+  
+        <p class="fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="text-light opacity-50">&copy; 2022 All rights reserved. Designed by  </span>
+          <a class="nav-link d-inline-block p-0" href="https://bio.link/jayanth" target="_blank" rel="noopener">Jayanth Kumar R V, I-IT, Mepco Schlenk Engineering College, Sivakasi</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+  </body>
+</html>

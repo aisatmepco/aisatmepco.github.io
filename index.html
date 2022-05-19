@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8">
+    <title>AIS@Mepco2022 - Mepco Schlenk Engineering College, Sivakasi</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AIS@Mepco2022 - Advanced Instructional School on Algebraic Combinatorics and Spectral Graph Theory held at Mepco Schlenk Engineering College, Sivakasi from 30 May to 16 June 2022">
+    <meta name="keywords" content="AIS@Mepco2022, Advanced Instructional School on Algebraic Combinatorics and Spectral Graph Theory, Mepco Schlenk Engineering College, Sivakasi, IIT Bombay, Advanced Instructional Schools, IISc Bangalore, Sivakasi, Jayanth Kumar">
+    <meta name="author" content="Mepco Schlenk Engineering College, Sivakasi, Jayanth Kumar">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image" content="https://aisatmepco.web.app/ais-mepco-web.webp">
+    <meta name="twitter:image" content="https://aisatmepco.web.app/ais-mepco-web.webp">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+    
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #131022;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .header .navbar .navbar-expand-lg .navbar-light .bg-light .shadow-sm .fixed-top {
+        backdrop-filter: blur(20px);
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  
+    
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span><b>AIS@Mepco2022</b></span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      
+      <header class="header navbar navbar-expand-lg navbar-light navbar-blur bg-light shadow-sm fixed-top">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3">
+            AIS@Mepco2022
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                  <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/speakers" class="nav-link">Speakers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/places-to-visit.html" class="nav-link">Places to visit</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/selected-participants.html" class="nav-link">Participants List</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/waitlist.html" class="nav-link">Waitlist</a>
+                </li>
+              </ul>
+            </div>  
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+
+      <!-- Image + Title split section -->
+      <section class="container-fluid position-relative px-0 pt-5 mt-3 mt-lg-4">
+        <div class="row g-0">
+          <div class="col-xl-7 col-lg-6 pe-lg-5">
+            <div class="d-flex h-100 pe-xl-4">
+              <img src="https://ik.imagekit.io/mepco/images/combinatorics_V6KbGgjar.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900071068" width="100%" height="100%" class="style=object-fit: contain;" >
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 position-relative py-5">
+            <img src="https://ik.imagekit.io/mepco/images/hero-bg_BqnjwIEzG.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900072484" class="position-absolute top-50 translate-middle-y ms-lg-n4" width="866" alt="Background shapes">
+            <div class="position-relative zindex-5 text-center text-lg-start px-3 px-lg-0 py-xl-4 py-xxl-5 mt-lg-3 mx-auto mx-lg-0" style="max-width: 530px;">
+              <h2 class="h3 text-primary">30 May - 16 Jun 2022</h2>
+              <h2 class="display-1 pb-lg-3 mb-3">Welcome to AIS 2022</h2>
+              <div class="d-flex justify-content-center justify-content-lg-start text-start mb-2">
+                <div class="fs-xl">Advanced Instructional School on “Algebraic Combinatorics and Spectral Graph Theory”</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About the Event-->
+      <section id="event-in-detail" class="container pt-5 pb-2 mt-3 mt-sm-4 mt-xl-5">
+        <h2 class="h1 text-center pb-3 pb-lg-4">About the event</h2>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs flex-nowrap justify-content-lg-center overflow-auto pb-2 mb-3 mb-lg-4" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-nowrap active" id="about-ais-tab" data-bs-toggle="tab" data-bs-target="#about-ais" type="button" role="tab" aria-controls="about-ais" aria-selected="true">
+              About AIS
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-nowrap" id="about-institution-tab" data-bs-toggle="tab" data-bs-target="#about-institution" type="button" role="tab" aria-controls="about-institution" aria-selected="false">
+              About the Institution
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-nowrap" id="about-convenors-tab" data-bs-toggle="tab" data-bs-target="#about-convenors" type="button" role="tab" aria-controls="about-convenors" aria-selected="false">
+              About the Convenors
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-nowrap" id="organising-committee-tab" data-bs-toggle="tab" data-bs-target="#organising-committee" type="button" role="tab" aria-controls="organising-committee" aria-selected="false">
+              Organising Committee
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content bg-secondary rounded-3 py-4">
+
+          <!-- About AIS -->
+          <div class="tab-pane fade show active" id="about-ais" role="tabpanel" aria-labelledby="about-ais-tab">
+            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
+              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
+                <h3 class="mb-lg-4">About AIS</h3>
+                <p>Advanced Instructional Schools (AIS) are conducted by NCM with the financial support from Advancement of Arts and Sciences in India, which is known as ARSI. These Advanced Instructional Schools (AIS) primarily aimed at II-V year Ph.D. students. Also research scholars and teachers who are interested to learn the basics of spectral graph theory and algebraic combinatorics may apply.</p>
+              </div>
+              <div class="col-lg-6 col-md-7 mt-md-4">
+                <img src="https://ik.imagekit.io/mepco/images/2006-atmlogo_8RJT8TZWd.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900069347" width="200" class="d-block my-lg-2 mx-auto me-md-0" width="595" alt="AIS Logo">
+              </div>
+            </div>
+          </div>
+
+          <!-- About MEPCO -->
+          <div class="tab-pane fade" id="about-institution" role="tabpanel" aria-labelledby="about-institution-tab">
+            <div class="row align-items-center pt-3 pb-2 pb-sm-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
+              <div class="col-lg-4  offset-lg-1 text-center text-md-start">
+                <h3 class="mb-lg-4">About MEPCO</h3>
+                <p><b>Mepco Schlenk Engineering College, Sivakasi</b> is a leading self-financing Engineering College started on 17th October 1984 in the presence of Ms. & Mr. Gunter Von schlenk, Ms. & Mr. Erwin Flohrer from M/s. Cari Schlenk A G, Germany and Dr. S. Krishnaswamy, the then Vice Chancellor, Madurai Kamaraj University.<br><br>
+                  The College is approved by AICTE, New Delhi and affiliated to Anna University, Chennai with Permanent Affiliation for 14 out of 17 programmes. All the eligible 7 UG Programs and 5 PG Programs are accredited by National Board of Accreditation (NBA), New Delhi under Tier-I Category. Also our college is reaccredited with A Grade with a CGPA of 3.22 on a 4 point scale for a period of 5 years from February, 2021 by National Assessment and Accreditation Council (NAAC), Bangalore in II cycle of accreditation.<br><br> Our college has been granted Autonomous Status by UCG, New Delhi and Anna University, Chennai from the academic year 2013-14. The institution is fast catered to bridge the gap of demand and supplies of quality Engineers and Managers and completes 38th year of Service par Excellence. The students are offered Value Added Courses, Special Courses, Audit Courses, NPTEL courses, Spoken Tutorials etc. beyond the curriculum.<br><br>The college is known for highly experienced faculty with average experience of 13 years; of them 143 (54.58%) are Ph.D. holders and 115 (43.07%) faculty are pursuing Ph.D.
+                  During nearly 4 decades of its existence, the college has many credentials: 10000+ students placed through campus placement; 136 R&D projects worth more than Rs.16 crores from various Government Funding Agencies and R&D Organizations; Anna University approved Research Centres-10 Nos with 205 completed and 190 pursuing Full and Part Time Ph.D scholars; publications of nearly 3000 (as on April, 2022) articles in International journals with 39897 citations and the institute h-index is 83 and i10 index is 882.
+                </p>
+              </div>
+              <div class="col-lg-6 col-md-7 mt-md-4">
+                <img src="https://ik.imagekit.io/mepco/images/mcc-mepco_QtV0f__-4.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900073876" class="d-block my-lg-2 mx-auto me-md-0 rounded" width="502" alt="Image"><figcaption class="figure-caption text-center">Mepco Convention Centre</figcaption><br>
+                <img src="https://ik.imagekit.io/mepco/images/mech-mepco_bhdXJKPJy.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900074151" class="d-block my-lg-2 mx-auto me-md-0 rounded" width="502" alt="Image"><figcaption class="figure-caption text-center">Mechanical Engineering Department Block</figcaption><br>
+                <img src="https://ik.imagekit.io/mepco/images/ise-mepco_PcGjf8m_h.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900072996" class="d-block my-lg-2 mx-auto me-md-0 rounded" width="502" alt="Image"><figcaption class="figure-caption text-center">Industrial Safety Engineering Department Block</figcaption><br>
+                <img src="https://ik.imagekit.io/mepco/images/bt-mepco_ajrcPMxo77.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900070732" class="d-block my-lg-2 mx-auto me-md-0 rounded" width="502" alt="Image"><figcaption class="figure-caption text-center">Biotechnology Department Block</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Convenors -->
+          <div class="tab-pane fade" id="about-convenors" role="tabpanel" aria-labelledby="about-convenors-tab">
+            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0">
+              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
+                <h3 class="mb-lg-4">Convenors</h3>
+                <p><b>Prof. Sivaramakrishnan Sivasubramanian</b><br> Professor, IIT Bombay<br><br>
+
+                  <b>Dr. M. Rajesh Kannan</b><br> Assistant Professor, IIT Kharagpur <br><br>
+                  
+                  <b>Mr. R. Gurusamy</b><br>
+                  Assistant Professor(Sr.G), MSEC, Sivakasi</p>
+              </div>
+              <div class="col-lg-6 col-md-7 mt-n3 mt-md-1">
+                <img src="https://ik.imagekit.io/mepco/images/cseblock-mepco_EVft3KW4l.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900072123" class="d-block mb-lg-2 mx-auto me-md-0 rounded" width="525" alt="Image">
+              </div>
+            </div>
+          </div>
+
+          <!-- Organising Committee -->
+          <div class="tab-pane fade" id="organising-committee" role="tabpanel" aria-labelledby="organising-committee-tab">
+            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0">
+              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
+                <h3 class="mb-lg-4">Organising Committee</h3>
+                <p><b>Sri. A. Tenzing</b><br> Correspondent<br><br>
+
+                  <b>Dr. S. Arivazhagan</b><br> Principal<br><br>
+                  
+                  <b>Dr. R. Ratha Jeyalakshmi</b><br> HOD, Department of Mathematics<br><br>
+                  
+                  <b>Dr. A. Meena Kumari</b><br> AP Coordinator</p>
+              </div>
+              <div class="col-lg-6 col-md-7 mt-n3 mt-md-1">
+                <img src="https://ik.imagekit.io/mepco/images/ajblock-mepco_TUuBlRFEs.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900069528" class="d-block mb-lg-2 mx-auto me-md-0 rounded" width="545" alt="Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Speakers -->
+      <section id="speakers" class="container py-5 my-2 my-md-4 my-lg-5">
+        <div class="d-md-flex align-items-center text-center text-md-start pt-md-1 pt-lg-3">
+          <h2 class="h1 text-center mb-4 mb-md-0 me-md-3">Speakers</h2>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-2 mt-lg-4">
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/bapat_vvuTK61ef.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900070408" class="rounded-3" width="300" height="300" alt="Prof. R B Bapat">
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. R B Bapat</h3>
+                <p class="fs-sm mb-0">Professor in Theoretical Statistics and Mathematics Unit, ISI Delhi</p><br>
+                <a href="/speakers/prof-bapat.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/mk-srini_clWXZ_G4N.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900075066" class="rounded-3" width="300" height="300" alt="Prof. Murali K Srinivasan" />
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Murali K Srinivasan</h3>
+                <p class="fs-sm mb-0">Professor in Department of Mathematics, IIT Bombay</p><br>
+                <a href="/speakers/prof-srinivasan.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/krishna_ir7euY6eb.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900073344" class="rounded-3" width="300" height="300" alt="Prof. Sivaramakrishnan Sivasubramanian">
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Sivaramakrishnan Sivasubramanian</h3>
+                <p class="fs-sm mb-0">Professor in Department of Mathematics, IIT Bombay</p><br>
+                <a href="/speakers/prof-sivaramakrishnan.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/arvind_19M-FWP0E.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900069690" class="rounded-3" width="300" height="300" alt="Prof. Arvind Ayyer">
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Arvind Ayyer</h3>
+                <p class="fs-sm mb-0">Associate Professor, Department of Mathematics, IISc Bangalore</p><br>
+                <a href="/speakers/prof-arvind.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- Item -->
+           <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/narayanan_-C_akxG1e.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900075612" class="rounded-3" width="300" height="300" alt="Prof. R Venkatesh">
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Narayanan N</h3>
+                <p class="fs-sm mb-0">Assistant Professor, Department of Mathematics, IIT Madras</p><br>
+                <a href="/speakers/prof-narayanan.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col">
+            <div class="card card-hover border-0 bg-transparent">
+              <div class="position-relative">
+                <img src="https://ik.imagekit.io/mepco/images/rajesh_Gj6eeSK46.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900076380" class="rounded-3" width="300" height="300" alt="Prof. Rajesh Kannan">
+              </div>
+              <div class="card-body text-center p-3">
+                <h3 class="fs-lg fw-semibold pt-1 mb-2">Prof. Rajesh Kannan</h3>
+                <p class="fs-sm mb-0">Assistant professor, Department of Mathematics, IIT Kharagpur</p><br>
+                <a href="/speakers/prof-rajesh.html" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Tickets -->
+      <section class="container pb-5 mb-2 mb-md-4 mb-lg-5 mt-n3 mt-lg-0">
+        <div class="row pt-xl-2 pb-md-3">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <h2 class="h1 text-center text-sm-start mb-4">Information to participants</h2>
+            <p class="pb-2 pb-lg-4 pb-xl-5 mb-3">No registration fee is required. Our Institution will provide Local Hospitality (Accommodation and Food) for the selected out station participants for free.<br><br>
+              For more details contact: <br>Coordinators - <b>+91 97914 19624, +91 99434 50300</b><br><br>
+              Fill the form to register for the Workshop online through the link before 15 May, 2022.</p>
+
+          </div>
+          <div class="col-xl-6 col-lg-7 offset-xl-1 position-relative">
+
+            <!-- Ticket card -->
+            <div class="position-relative">
+              <div class="position-relative overflow-hidden bg-gradient-primary rounded-3 zindex-5 py-5 px-4 p-sm-5">
+                <span class="position-absolute top-50 start-0 translate-middle bg-light rounded-circle p-4"></span>
+                <span class="position-absolute top-0 start-0 w-100 h-100 bg-repeat-0 bg-position-center-end bg-size-cover" style="background-image: url(assets/img/landing/conference/price-card-pattern.webp);"></span>
+                <div class="px-md-4 position-relative zindex-5">
+                  <div class="d-sm-flex align-items-start justify-content-between">
+                    <div class="text-center text-sm-start me-sm-4">
+                      <div class="lead fw-semibold text-light text-uppercase mb-2">30 May - 16 Jun 2022</div>
+                      <h3 class="h1 text-light">AIS@Mepco2022</h3>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-sm-row align-items-center pt-4 mt-2">
+                    <a href=" https://www.atmschools.org/school/2022/AIS/acsgt/application-form" class="btn btn-light btn-lg mb-3 mb-sm-0 me-sm-3">Register now</a>
+                  </div>
+                </div>
+                <span class="position-absolute top-50 end-0 translate-middle-y bg-light rounded-circle p-4 me-n4"></span>
+              </div>
+              <span class="position-absolute bg-gradient-primary opacity-60 bottom-0 mb-n2 d-dark-mode-none" style="left: 1.5rem; width: calc(100% - 3rem); height: 5rem; filter: blur(.625rem);"></span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Location -->
+      <section class="container py-5">
+        <div class="row mt-lg-3 pt-1 pt-md-4 pt-lg-5">
+          <div class="col-xl-3 col-md-4 text-center text-md-start">
+            <h3 class="h4">Venue</h3>
+            <h2 class="h1 mb-4">Mepco Schlenk Engineering College, Sivakasi</h2>
+            <div class="d-none d-md-block text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="118" height="118" fill="none"><g clip-path="url(#A)"><path d="M116.912 76.527c-4.963-3.081-9.413-6.675-13.52-10.782-1.37-1.369-3.766-.343-3.766 1.54 0 1.54-.171 3.081-.171 4.621-14.89 2.739-29.78 3.936-45.013 4.108-12.836.342-30.123 1.712-41.761-4.45-8.9-4.792-10.269-15.917-6.504-24.475 1.54-3.594 4.279-6.504 7.702-8.557 3.936-2.396 7.873-1.027 11.981-2.054.513-.171.685-.856.342-1.369-6.333-6.675-17.457 1.027-21.565 6.504-5.819 7.702-6.161 18.998-1.027 27.042 7.531 11.981 25.501 11.125 37.653 11.467 19.169.685 39.365.171 58.192-4.108 0 1.712.171 3.252.685 4.963 0 .342.171.513.342.685-1.369 1.198-.171 4.279 2.225 3.765 4.963-1.027 9.927-2.568 14.548-4.792 1.198-1.026.856-3.251-.343-4.107zm-13.178-4.45c2.396 2.054 4.792 4.108 7.531 5.99-2.396 1.027-4.964 1.712-7.531 2.396v-.685c-.514-2.567-.342-5.135 0-7.702z" fill="currentColor"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h118v118H0z"/></clipPath></defs></svg>
+            </div>
+          </div>
+          <div class="col-xl-9 col-md-8">
+            <img src="https://ik.imagekit.io/mepco/images/mcc-mepco_QtV0f__-4.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900073876" class="rounded-3" width="952" alt="Venue">
+          </div>
+        </div>
+        <div class="row mb-lg-3 pb-1 pb-md-4 pb-lg-5 mt-4 mt-sm-n5">
+          <div class="col-lg-4 col-md-5 offset-md-6 offset-lg-7 mt-md-n5">
+            <div class="gallery mt-md-n4 mx-auto" style="max-width: 416px;">
+              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.809291312442!2d77.85124811412489!3d9.525292193177586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06d3287794055d%3A0x9c7b889bf154fb86!2sMepco%20Schlenk%20Engineering%20College!5e0!3m2!1sen!2sin!4v1652584487247!5m2!1sen!2sin" data-iframe="true" class="gallery-item rounded-2" data-sub-html='<h6 class="fs-sm text-light">Mepco Schlenk Engineering College, Sivakasi</h6>'>
+                <img src="https://ik.imagekit.io/mepco/images/map-light_5UVda_mjB.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900073484" class="d-dark-mode-none" alt="Map preview">
+                <div class="gallery-item-caption fs-sm fw-medium">Mepco Schlenk Engineering College, Sivakasi</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section>
+  <h1 class="text-center">Places to visit</h1><br>
+           <!-- Link swiper slides to any content via swiper-tabs. Place outside of any container -->
+<div class="position-relative py-lg-4 py-xl-5">
+
+  <!-- Swiper tabs -->
+  <div class="swiper-tabs position-absolute top-0 start-0 w-100 h-100">
+    <div id="image-1" class="position-absolute top-0 start-0 w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover swiper-tab active" style="background-image: url(https://ik.imagekit.io/mepco/images/meenakshi-amman_t6Oa3Knt-.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900074342);">
+      <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+    </div>
+    <div id="image-2" class="position-absolute top-0 start-0 w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover swiper-tab" style="background-image: url(https://ik.imagekit.io/mepco/images/srivi-andal-temple_fNv9iTyqi.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900077571);">
+      <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+    </div>
+    <div id="image-3" class="position-absolute top-0 start-0 w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover swiper-tab" style="background-image: url(https://ik.imagekit.io/mepco/images/shenbagathopu__XWFWxhw-b.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900076989);">
+      <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+    </div>
+    <div id="image-4" class="position-absolute top-0 start-0 w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover swiper-tab" style="background-image: url(https://ik.imagekit.io/mepco/images/courtallam_mbg14-dfA.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652900071469);">
+      <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+    </div>
+  </div>
+
+  <!-- Swiper slider -->
+  <div class="container position-relative zindex-5 py-5">
+    <div class="row py-2 py-md-3">
+      <div class="col-xl-5 col-lg-7 col-md-9">
+
+        <!-- Slider controls (Prev / next) -->
+        <div class="d-flex justify-content-center justify-content-md-start pb-3 mb-3">
+          <button type="button" id="case-study-prev" class="btn btn-prev btn-icon btn-sm bg-white me-2">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button type="button" id="case-study-next" class="btn btn-next btn-icon btn-sm bg-white ms-2">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Card -->
+        <div class="card bg-white shadow-sm p-3">
+          <div class="card-body">
+            <div class="swiper" data-swiper-options='{
+              "spaceBetween": 30,
+              "loop": true,
+              "tabs": true,
+              "pagination": {
+                "el": "#case-study-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#case-study-prev",
+                "nextEl": "#case-study-next"
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#image-1">
+                  <h3 class="mb-2">Meenakshi Amman Temple, Madurai</h3>
+                  <p class="fs-sm text-muted border-bottom pb-3 mb-3">Madurai, Tamil Nadu</p>
+                  <p class="pb-2 pb-lg-3 mb-3">.Arulmigu Meenakshi Amman Temple, also known as Meenakshi Sundareshwarar Temple, is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to the goddess Meenakshi, a form of Parvati, and her consort, Sundareshwarar, a form of Shiva.</p>
+                  <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#image-2">
+                  <h3 class="mb-2">Srivilliputhur Andal Temple</h3>
+                  <p class="fs-sm text-muted border-bottom pb-3 mb-3">Srivilliputhur, Virudhunagar, Tamil Nadu</p>
+                  <p class="pb-2 pb-lg-3 mb-3">Srivilliputhur Andal Temple in Srivilliputhur, a town in Virudhunagar district in the South Indian state of Tamil Nadu, is dedicated to the Hindu god Vishnu. It is located 80 km from Madurai.</p>
+                  <a href="/places-to-visit.html" class="btn btn-primary">Learn more</a>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#image-3">
+                  <h3 class="mb-2">Shenbaga Thopu</h3>
+                  <p class="fs-sm text-muted border-bottom pb-3 mb-3">Srivilliputhur, Virudhunagar, Tamil Nadu</p>
+                  <p class="pb-2 pb-lg-3 mb-3">Shenbaga Thoppu,a forest area about 8 km west from Srivilliputtur is a very good option for trekking.There is no proper bus service to reach here though.However the place can be reached by two-wheeler or even cycle. The forests are found on the eastern slopes of the Western Ghats.</p>
+                  <a href="/places-to-visit.html" class="btn btn-primary">Learn more</a>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#image-4">
+                  <h3 class="mb-2">Courtallam</h3>
+                  <p class="fs-sm text-muted border-bottom pb-3 mb-3">Tenkasi, Tamil Nadu</p>
+                  <p class="pb-2 pb-lg-3 mb-3">Courtallam is a panchayat town situated at a mean elevation of 160 m in the foothills of the Western Ghats in Tenkasi district of Tamil Nadu, India. The Coutrallam Falls on the Chittar River is a major tourist attraction. </p>
+                  <a href="/places-to-visit.html" class="btn btn-primary">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="dark-mode pt-4 mt-3">
+          <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <span class="fs-4">AIS@Mepco2022</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/speakers" class="nav-link">Speakers</a></li>
+          <li class="nav-item">
+            <a href="/places-to-visit.html" class="nav-link">Places to visit</a>
+          </li>
+          <li class="nav-item">
+            <a href="/selected-participants.html" class="nav-link">Participants List</a>
+          </li>
+          <li class="nav-item">
+            <a href="/waitlist.html" class="nav-link">Waitlist</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a href=" https://www.atmschools.org/school/2022/AIS/acsgt/application-form" class="btn btn-primary shadow-primary btn-lg me-sm-4 mb-3">Register now</a>
+        </div>
+  
+        <p class="fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="text-light opacity-50">&copy; 2022 All rights reserved. Designed by </span>
+          <a class="nav-link d-inline-block p-0" href="https://bio.link/jayanth" target="_blank" rel="noopener">Jayanth Kumar R V, I-IT, Mepco Schlenk Engineering College, Sivakasi</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

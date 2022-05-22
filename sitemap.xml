@@ -33,6 +33,12 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+   <url>
+       <loc>https://aisatmepco.github.io/timetable</loc>
+       <lastmod>2022-05-22T15:56:24+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
   <url>
        <loc>https://aisatmepco.github.io/speakers/prof-bapat</loc>
        <lastmod>2022-05-19T15:56:24+00:00</lastmod>
